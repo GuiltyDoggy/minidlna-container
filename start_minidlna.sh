@@ -1,3 +1,3 @@
 #!/bin/sh
 #
-podman run -d -v ./media:/opt --name minidlna --network host dlna-container
+podman run -d --privileged -v ./media:/minidlna --name minidlna --network host dlna-container
