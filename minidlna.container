@@ -1,0 +1,13 @@
+[Unit]
+Description=A Podman Quadlet that will start a miniDLNA container to serve media that is in the directory /var/home/yosuke/Videos/media
+
+[Container]
+Image=docker.io/vladgh/minidlna
+ContainerName=minidlna
+
+#Define Volume and Networks
+Volume=/var/home/yosuke/Videos/media:/media:Z,shared
+Network=host
+
+[Install]
+WantedBy=multi-user.target default.target
