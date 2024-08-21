@@ -9,5 +9,9 @@ ContainerName=minidlna
 Volume=/var/home/yosuke/Videos/media:/media:Z,shared
 Network=host
 
+#Define Environment Variables
+Environment=MINIDLNA_MEDIA_DIR=/media
+Environment=MINIDLNA_FRIENDLY_NAME=Beelink
+
 [Install]
 WantedBy=multi-user.target default.target
