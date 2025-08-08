@@ -1,5 +1,4 @@
 [Unit]
-<<<<<<< HEAD
 Description=A service to run minidlna
 
 [Container]
@@ -16,21 +15,6 @@ Network=host
 Environment=MINIDLNA_MEDIA_DIR_1=V,/media/movies
 Environment=MINIDLNA_MEDIA_DIR_2=V,/media/video
 Environment=MINIDLNA_FRIENDLY_NAME=Fedora
-=======
-Description=A Podman Quadlet that will start a miniDLNA container to serve media that is in the directory /var/home/yosuke/Videos/media
-
-[Container]
-Image=docker.io/vladgh/minidlna
-ContainerName=minidlna
-
-#Define Volume and Networks
-Volume=/var/home/yosuke/Videos/media:/media:Z,shared
-Network=host
-
-#Define Environment Variables
-Environment=MINIDLNA_MEDIA_DIR=/media
-Environment=MINIDLNA_FRIENDLY_NAME=Beelink
->>>>>>> ddee71619b944181823a486573a7512a2dce8d19
 
 [Install]
 WantedBy=multi-user.target default.target
