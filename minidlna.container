@@ -1,0 +1,20 @@
+[Unit]
+Description=A service to run minidlna
+
+[Container]
+Image=docker.io/vladgh/minidlna:latest
+ContainerName=minidlna
+AutoUpdate=registry
+
+#Define Volume and Networks
+Volume=/run/media/yosuke/Scratch/yosuk/Win32/Temp/Cache:/media/movies:Z,shared
+Volume=/run/media/yosuke/Scratch/yosuk/Win32/Config/Tmp/2018/Misc:/media/video:Z,shared
+Network=host
+
+#Define Environment Variables
+Environment=MINIDLNA_MEDIA_DIR_1=V,/media/movies
+Environment=MINIDLNA_MEDIA_DIR_2=V,/media/video
+Environment=MINIDLNA_FRIENDLY_NAME=Fedora
+
+[Install]
+WantedBy=multi-user.target default.target
