@@ -17,4 +17,3 @@ Environment=MINIDLNA_MEDIA_DIR_2=V,/media/video
 Environment=MINIDLNA_FRIENDLY_NAME=Fedora
 
 [Install]
-WantedBy=multi-user.target default.target
